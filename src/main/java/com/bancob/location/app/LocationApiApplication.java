@@ -18,19 +18,21 @@ public class LocationApiApplication {
 		return new WebMvcConfigurer() {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/location/create")
-				.allowedOrigins("http://localhost:8080","http://localhost:4200");
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
 				registry.addMapping("/location/create/")
-				.allowedOrigins("http://localhost:8080","http://localhost:4200");
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
 				registry.addMapping("/location/all")
-				.allowedOrigins("http://localhost:8080","http://localhost:4200");
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
 				registry.addMapping("/location/")
-				.allowedOrigins("http://localhost:8080","http://localhost:4200");
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
 				registry.addMapping("/location")
-				.allowedOrigins("http://localhost:8080","http://localhost:4200");
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
 				registry.addMapping("/location/get")
-				.allowedOrigins("http://localhost:8080","http://localhost:4200");
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
+				registry.addMapping("/location/get/")
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
 				registry.addMapping("/location/get/{id}")
-				.allowedOrigins("http://localhost:8080","http://localhost:4200");
+				.allowedOrigins("http://localhost:8080","http://localhost:4200","http://localhost");
 			}
 		};
 	}

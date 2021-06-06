@@ -20,8 +20,8 @@ class LocationRepositoryTest {
 	public void insertTest() {
 		
 		Location parent = new Location();
-		parent.setArea_m2((long) 40);
-		parent.setName("dani");
+		parent.setArea_m2((long) 5000);
+		parent.setName("Casitlla");
 		
 		this.locationService.createLocation(parent);
 		
@@ -31,8 +31,8 @@ class LocationRepositoryTest {
 		
 		//Adding a relation of a new record with an existing record		
 		Location child = new Location ();
-		child.setName("da");
-		child.setArea_m2((long) 4);
+		child.setName("Techo");
+		child.setArea_m2((long) 1000);
 		
 		
 		child.setParentLocation(parent);				
@@ -46,8 +46,8 @@ class LocationRepositoryTest {
 		
 		//Adding a new relation which parent is the previous child just to make sure
 		Location newchild = new Location ();
-		newchild.setName("jo");
-		newchild.setArea_m2((long) 3);
+		newchild.setName("Terrazas");
+		newchild.setArea_m2((long) 200);
 		
 		newchild.setParentLocation(child);
 		
